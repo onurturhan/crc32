@@ -14,6 +14,8 @@
 char inp[MAX_FILE_SIZE];
 int srcSize;
 
+extern unsigned int CalculateCrc(char *s, unsigned int n);
+
 void printProgress(char count)
 {
     #define PB_STEP_SIZE       2
@@ -38,7 +40,7 @@ void printProgress(char count)
     free(buffer);
 }
 
-int readFile(const char* filename, char* src)
+int readFile(char* filename, char* src)
 {
     FILE* in_file = fopen(filename, "rb");
     struct stat sb;
