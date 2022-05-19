@@ -1,5 +1,7 @@
 #include <string.h>
 
+unsigned int CalculateCrc(unsigned char *s, unsigned int n);
+
 /*  Run a set of bytes through the crc shift register.  If s is a NULL */
 /*   pointer, then initialize the crc shift register contents instead. */
 /*   Return the current crc in either case. Re-used from cfe_fs_decompress.c */
